@@ -37,6 +37,7 @@ main {
   align-items: center;
   padding: 10px;
   font-size: 1rem;
+  overflow: scroll;
 }
 
 /* FAQ Item Styling */
@@ -71,10 +72,11 @@ main {
 /* FAQ Active State */
 .faq-item.active {
   background-color: #ffffff;
+  height: auto;
 }
 
 .faq-item.active .answer {
-  max-height: 400px; /* উত্তর দেখানোর জন্য */
+  min-height: 100px; /* উত্তর দেখানোর জন্য */
   padding: 15px;
 }
 
