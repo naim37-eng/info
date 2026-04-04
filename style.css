@@ -1,113 +1,121 @@
-*{
+* {
   margin: 0px;
-  padding:opx;
+  padding: 0px;
   box-sizing: border-box;
 }
-body{
-  background-color:#0F172A;
 
-  background-blend-mode:darken;
+body {
+  background-color: #0F172A;
+  background-blend-mode: darken;
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
-header{
+
+header {
   min-width: 100vw;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: #050770;
-  height: 200px;
-  display:flex;
+  height: 50px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-main{
+
+main {
   display: flex;
 }
 
-.div1{
+/* --- DIV 1 (FAQ Layout) --- */
+.div1 {
   width: 25%;
   height: 100vh;
   background-color: #1D1E41;
-   display:flex;
- flex-direction: column;
- align-items: center;
- padding: 10px;
- font-size: 2rem;
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 1rem;
 }
+
+/* FAQ Item Styling */
+.faq-item {
+  background-color: #BEBEBE;
+  margin-bottom: 8px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.question {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.answer {
+  padding: 0 15px;
+  max-height: 0; /* শুরুতে বন্ধ থাকবে */
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* FAQ Active State */
+.faq-item.active {
+  background-color: #ffffff;
+}
+
+.faq-item.active .answer {
+  max-height: 400px; /* উত্তর দেখানোর জন্য */
+  padding: 15px;
+}
+
+/* --- DIV 2 & 3 --- */
 .div2 {
   width: 55%;
-   display:flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #34367E;
   height: 100vh;
   padding: 10px;
-  text-wrap:wrap;
-  overflow:scroll;
-  border-right:3px  solid black;
-  border-left:3px  solid black;
-  font-size: 2rem;
+  overflow-y: auto;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
 }
+
 .div3 {
   padding: 10px;
   height: 100vh;
   background-color: #6466AF;
   width: 20%;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2rem;
-}
-
-@media (max-width: 500px){
-  main {
   display: flex;
   flex-direction: column;
-}
-  
-  
-  
-  .div1{
-  
-  min-width: 100vw;
-  height: 400px;
-  margin-bottom:20px;
-  background-color: #1D1E41;
-   display:flex;
- flex-direction: column;
- align-items: center;
- padding: 10px;
- font-size: 1rem;
- 
-}
-.div2 {
-  width: 100vw;
-   display:flex;
- flex-direction: column;
- align-items: center;
-  background-color: #34367E;
-  
-  padding: 10px;
-  text-wrap:wrap;
-  overflow:scroll;
-  border-right:3px  solid black;
-  border-left:3px  solid black;
-  font-size: 1rem;
- 
-}
-.div3 {
-  padding: 10px;
-  min-width: 100vw;
-  background-color: #6466AF;
-  display:flex;
-  display:none;
-  flex-direction: column;
   align-items: center;
-  font-size: 1rem;
 }
 
-  
-  
-  
-  
+/* Responsiveness */
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+  .div1, .div2 {
+    width: 100vw;
+    height: auto;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  .div3 {
+    display: none;
+  }
 }
