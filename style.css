@@ -1,0 +1,280 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0F172A;
+  background-blend-mode: darken;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  position:fixed;
+  background-color: #192C3B;
+  width:100%;
+  line-height: 25px;
+  line-height: 30px;
+  height: 70px;
+  z-index: 100;
+  
+}
+header p{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.list{
+  display: inline-block;
+ display: flex; 
+ flex-direction:row;
+ gap: 40px;
+ width: 100%;
+ justify-content: center;
+}
+.list span a{
+  text-decoration:none;
+  color: white;
+  transition: all 0.5s ease;
+} 
+.list span a:focus{
+  transform: translateZ(10px);
+  border-bottom:1px solid white;
+
+}
+.search-bar{
+  width:270px;
+  height: 25px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border:none;
+
+}
+  .search-bar:focus{
+    outline: none;
+  }
+.button{
+  background-color: #2563EB;
+  border:none;
+  border-radius: 10px;
+  height: 25px;
+  width:60px;
+  cursor: pointer;
+  transition:all 0.3s ease-in-out;
+}
+
+
+
+.button:focus{
+  background-color: #FF4FC4;
+  color: white;
+}
+
+main {
+  display: flex;
+  padding-top: 70px;
+  min-width: 100vw;
+}
+
+/* --- DIV 1 (FAQ Layout) --- */
+.div1 {
+  width: 25%;
+  height: 100vh;
+  background-color: #1D1E41;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 1rem;
+  overflow: scroll;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+  background-color: #BEBEBE;
+  margin-bottom: 8px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.3s ease;
+}
+
+.question {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.answer {
+  padding: 0 15px;
+  max-height: 0; /* শুরুতে বন্ধ থাকবে */
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* FAQ Active State */
+.faq-item.active {
+  background-color: #ffffff;
+  height: auto;
+}
+
+.faq-item.active .answer {
+  min-height: 100px; /* উত্তর দেখানোর জন্য */
+  padding: 15px;
+}
+
+/* --- DIV 2 & 3 --- */
+.div2 {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #34367E;
+  height: 100vh;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+}
+
+.id-section{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+ align-content: flex-start;
+}
+.id-desine{
+  background-color:#FFFFFF;
+  color: black;
+  border-radius: 25px;
+  width: 340px;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-wrap: wrap;
+  box-shadow: 2px 2px 4px #76797D
+  ;
+  margin:20px;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+  .id-desine:hover{
+transform: scale(1.05);
+
+background-color: #E3F2FD;
+  }
+  
+.info-title{
+  width: 100%;
+  height:50px;
+  text-align: center;
+  background-color: #3DA6F0;
+   margin:20px ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 3em;
+   font-weight: 700;
+}
+
+.photo{
+
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #2563EB;
+  text-align: center;
+
+  
+}
+.id-desine h2{
+  text-transform: uppercase;
+  word-spacing: 5px;
+  
+  font-weight: 700;
+  text-wrap:wrap;
+  text-align: center;
+  text-overflow:hidden;
+  display:inline-block;
+}
+.id-desine h3{
+  color: #6B7280;
+  margin:5px 0px;
+}
+
+.id-desine a{
+  text-decoration: none;
+  color :white;
+  background-color: #2563EB;
+  margin-bottom: 10px;
+  width:120px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 15px;
+  translate: all 0.3s ease-in-out;
+}
+.id-desine a:hover{
+  background-color: #F6A730;
+}
+
+
+
+.div3 {
+  padding: 10px;
+  height: 100vh;
+  background-color: #6466AF;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsiveness */
+@media (max-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+  .div1 {
+    width: 100vw;
+  overflow: scroll;
+  height: 400px;
+    margin-bottom:10px;
+  }
+ 
+  .div2 {
+  width: 100vw;
+  height: auto;
+  min-height: 400px;
+  border: none;
+}
+
+
+}
+
+@media (max-width: 650px) {
+  .div3 {
+    display: none;
+  }
+}
