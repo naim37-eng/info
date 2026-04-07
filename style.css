@@ -141,7 +141,7 @@ main {
 
 /* --- DIV 2 & 3 --- */
 .div2 {
-  width: 55%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,7 +180,7 @@ main {
   .id-desine:hover{
 transform: scale(1.05);
 
-background-color: #E3F2FD;
+
   }
   
 .info-title{
@@ -245,7 +245,7 @@ background-color: #E3F2FD;
   padding: 10px;
   height: 100vh;
   background-color: #6466AF;
-  width: 20%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
